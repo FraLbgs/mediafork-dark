@@ -164,15 +164,14 @@ body.template-dark {
     justify-content: center;
     left: 0;
     transform: translate(0,-1000px);
-    transition: transform 2s;
+    transition: transform 1.5s;
     width: 100%;
 }
 
 .nav-list-burg{
-    left: 0;
     top: 6rem;
     transform: translate(0,0);
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
 
 }
 
@@ -187,12 +186,8 @@ body.template-dark {
     display: inline-block;
     position: relative;
     color: #fff;
-    font-size: 1.5rem;
-    transition: border var(--transition-duration) var(--transition-function);
-}
-
-.nav-link-burg{
     font-size: 2.5rem;
+    transition: border var(--transition-duration) var(--transition-function);
 }
 
 .nav-link::after {
@@ -226,8 +221,25 @@ body.template-dark {
         justify-content: center;
         flex-direction: row;
         gap: 3rem;
-        top:0;
+        /* top:0; */
+        transform: translate(0,0);
     }
+
+    .nav-burg{
+        width: auto;
+    }
+
+    .nav-item-burg{
+        width: auto;
+        text-align: center;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .nav-link{
+        font-size: 1.5rem;
+    }
+
 }
 
 /* HERO BANNER */
