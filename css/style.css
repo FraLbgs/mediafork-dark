@@ -90,6 +90,10 @@ body.template-dark {
 
 /* HEADER */
 
+.body-burg{
+    overflow-y: hidden;
+}
+
 .header {
     position: fixed;
     top: 0;
