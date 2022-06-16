@@ -115,8 +115,6 @@ body.template-dark {
 }
 
 .header-container-burg {
-    display: flex;
-    padding: 1rem 2rem;
     border-bottom: 1px solid var(--transparent-white);
 }
 
@@ -128,16 +126,8 @@ body.template-dark {
     max-width: 50%;
 }
 
-.logo-burg{
-    max-width: 90%;
-}
-
 .logo-img {
     width: 4rem;
-}
-
-.logo-img-burg {
-    width: 5rem;
 }
 
 .logo-ttl {
@@ -146,11 +136,6 @@ body.template-dark {
     margin-left: 1rem;
 }
 
-.logo-ttl-burg {
-    font-size: 2.5rem;
-}
-
-
 /* HEADER -> NAV */
 
  .nav-burg{
@@ -158,7 +143,6 @@ body.template-dark {
 } 
 
 .fa-angle-up{
-    font-size: 5rem;
     font-weight: 900;
 }
 
@@ -173,20 +157,23 @@ body.template-dark {
 }
 
 .nav-list {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-}
-
-.nav-list-burg{
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
     left: 0;
-    top: 7rem;
+    transform: translate(0,-1000px);
+    transition: transform 2s;
+    width: 100%;
+}
+
+.nav-list-burg{
+    left: 0;
+    top: 6rem;
+    transform: translate(0,0);
+    transition: transform 0.5s;
+
 }
 
 .nav-item-burg{
@@ -233,7 +220,13 @@ body.template-dark {
         display: none; 
     }
     .nav-list {
+        position: static;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 3rem;
+        top:0;
     }
 }
 
