@@ -1,14 +1,20 @@
+// display the nav
+
 const burger = document.getElementById("mobile-button");
+const mainNav = document.getElementById("main-nav");
+
 burger.addEventListener("click", displayNav);
 
-const listeNL = document.querySelectorAll(".nav-link");
-for(const l of listeNL){
-    l.addEventListener("click", displayNav);
-}
-
-function displayNav(e){
+mainNav.addEventListener("click", function(e){
+    if(e.target.hasAttribute("href")) displayNav();
+});
+    
+function displayNav(){
     document.body.classList.toggle("overflow");
-    document.getElementById("main-nav").classList.toggle("display");
+    mainNav.classList.toggle("display");
     document.querySelector(".fa").classList.toggle("fa-bars");
     document.querySelector(".fa").classList.toggle("fa-chevron-up");
 }
+
+// making modal
+
