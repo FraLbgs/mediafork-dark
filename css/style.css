@@ -87,12 +87,7 @@ body.template-dark {
     margin-bottom: 7rem;
 }
 
-
 /* HEADER */
-
-.body-burg{
-    overflow-y: hidden;
-}
 
 .header {
     position: fixed;
@@ -103,19 +98,11 @@ body.template-dark {
     z-index: 100;
 }
 
-.header-burg{
-    height: 100vh;
-}
-
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-}
-
-.header-container-burg {
-    border-bottom: 1px solid var(--transparent-white);
 }
 
 /* HEADER -> LOGO */
@@ -138,55 +125,22 @@ body.template-dark {
 
 /* HEADER -> NAV */
 
- .nav-burg{
-    width: 10%;
-} 
-
-.fa-angle-up{
-    font-weight: 900;
-}
-
 .nav-burger {
     font-size: 3rem;
     color: var(--primary-color);
     cursor: pointer;
 }
 
-.nav-burger-burg{
-    width : 50%;
-}
-
 .nav-list {
-    position: absolute;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    left: 0;
-    transform: translate(0,-1000px);
-    transition: transform 1.5s;
     width: 100%;
-}
-
-.nav-list-burg{
-    top: 6rem;
-    transform: translate(0,0);
-    /* transition: transform 0.5s; */
-
-}
-
-.nav-item-burg{
-    width: 100%;
-    text-align: center;
-    padding: 2rem 2rem;
-    border-bottom: 1px solid var(--transparent-white);
 }
 
 .nav-link {
     display: inline-block;
     position: relative;
     color: #fff;
-    font-size: 2.5rem;
     transition: border var(--transition-duration) var(--transition-function);
 }
 
@@ -210,36 +164,55 @@ body.template-dark {
     color: var(--transparent-white);
 }
 
+@media screen and (max-width: 767px) {
+    .nav-list{
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        height: 100vh;
+        top: -100vh;
+        left: 0;
+        background-color: rgba(0, 0, 0, .75);
+        transition: top 0.5s;
+    }
+    
+    .nav-item{
+        width: 100%;
+        border-bottom: 1px solid var(--transparent-white);
+    }
+
+    .nav-link{
+        width: 100%;
+        padding: 2rem 2rem;
+        font-size: 2rem;
+    }
+
+    .nav-list.display{
+        top: calc(6rem + 1px);
+    }
+
+    .overflow{
+        overflow-y: hidden;
+    }
+
+}
+
 @media screen and (min-width: 768px) {
     .nav-burger {
         display: none; 
     }
+
     .nav-list {
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
         gap: 3rem;
-        /* top:0; */
-        transform: translate(0,0);
-    }
-
-    .nav-burg{
-        width: auto;
-    }
-
-    .nav-item-burg{
-        width: auto;
-        text-align: center;
-        padding: 0;
-        border-bottom: 0;
     }
 
     .nav-link{
         font-size: 1.5rem;
     }
 
+    .nav-burg{
+        width: auto;
+    }
 }
 
 /* HERO BANNER */
