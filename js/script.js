@@ -18,3 +18,25 @@ function displayNav(){
 
 // making modal
 
+const services = document.getElementById("services");
+
+// services.addEventListener("click", function(e){
+    //     if(e.target.classList.contains("card")){
+        //         console.log("test");
+        //     }
+        // });
+        
+        
+const serv1 = document.getElementById("serv1");
+const mod1 = document.getElementById("mod1");
+const croix1 = document.getElementById("croix1");
+
+serv1.addEventListener("click", function(e){
+    mod1.classList.add("visibility");
+});
+
+croix1.addEventListener("click", function(e){
+    console.log("test");
+    mod1.classList.remove("visibility");
+    e.stopPropagation();
+});
