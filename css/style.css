@@ -357,8 +357,8 @@ body.template-dark {
     .modal{
         position: absolute;
         top: 5%;
-        left: 10%;
-        width: 80%;
+        left: 7%;
+        width: 86%;
         z-index: 50;
     }
 
@@ -393,7 +393,7 @@ body.template-dark {
     .modal-icon{
         position: relative;
         width: 90%;
-        padding: 1rem;
+        padding: 10rem, 1rem, 3rem, 1rem;
         opacity: 0.2;
     }
 

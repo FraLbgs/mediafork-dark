@@ -18,25 +18,18 @@ function displayNav(){
 
 // making modal
 
-const services = document.getElementById("services");
+const mods = document.getElementById("mods");
+const cards = document.querySelectorAll("li .card");
+const cross = document.querySelectorAll(".modal-content .fa-times");
 
-// services.addEventListener("click", function(e){
-    //     if(e.target.classList.contains("card")){
-        //         console.log("test");
-        //     }
-        // });
-        
-        
-const serv1 = document.getElementById("serv1");
-const mod1 = document.getElementById("mod1");
-const croix1 = document.getElementById("croix1");
+for(const c of cards){
+    c.addEventListener("click", function(e){
+        document.getElementById(this.dataset.serv).classList.add("visibility");
+    });
+}
 
-serv1.addEventListener("click", function(e){
-    mod1.classList.add("visibility");
-});
-
-croix1.addEventListener("click", function(e){
-    console.log("test");
-    mod1.classList.remove("visibility");
-    e.stopPropagation();
-});
+for(const c of cross){
+    c.addEventListener("click", function(e){
+            document.getElementById(e.target.dataset.serv).classList.remove("visibility");
+        });
+}
