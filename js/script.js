@@ -20,7 +20,7 @@ function displayNav(){
 
 const mods = document.getElementById("mods");
 const cards = document.querySelectorAll("li .card");
-const cross = document.querySelectorAll(".modal-content .fa-times");
+const close = document.querySelectorAll(".modal-content");
 
 for(const c of cards){
     c.addEventListener("click", function(e){
@@ -28,8 +28,9 @@ for(const c of cards){
     });
 }
 
-for(const c of cross){
+for(const c of close){
     c.addEventListener("click", function(e){
-            document.getElementById(e.target.dataset.serv).classList.remove("visibility");
+            this.classList.remove("visibility");
         });
 }
+
