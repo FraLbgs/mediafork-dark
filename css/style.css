@@ -349,66 +349,71 @@ body.template-dark {
     padding: 0 2rem;
 }
 
+.modal-parent{
+    position: relative;
+}
+
+.modal{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
 .modal-content{
-        position: relative;
-        display: none;
-        background-color: black;
-        color: white;
-    }
+    position: relative;
+    background-color: black;
+    color: white;
+}
 
+.visibility{
+    display: flex;
+}
 
-    .modal-parent{
-        position: relative;
-    }
+.fa.fa-times{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: white;
+    font-size: 2rem;
+}
 
-    .modal{
-        position: absolute;
-        top: 5%;
-        left: 7%;
-        width: 86%;
-        z-index: 50;
-    }
+.modal-title{
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    padding: 3rem;
+}
 
-    
-    .visibility{
-        display: block;
-    }
+.modal-icon{
+    position: relative;
+    opacity: 0.2;
+    width: 90%;
+}
 
-    .fa.fa-times{
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        color: white;
-        font-size: 2rem;
-    }
-
-    .modal-title{
-        color: var(--secondary-color);
-        text-align: center;
-        font-weight: 900;
-        font-size: 2rem;
-        line-height: 1.2;
-        padding: 3rem;
-    }
-
-    .modal-icon{
-        position: relative;
-        opacity: 0.2;
-        width: 90%;
-    }
-
-    .modal-info{
-        position: absolute;
-        top: 40%;
-        width: 100%;
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 3rem;
-    }
+.modal-info{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+}
 
 @media screen and (max-width: 767px) {
     .modal-content{
+        width: 88%;
+        height: 92%;
         text-align: center;
+    }
+
+    .modal-icon{
+        top: 6rem;
     }
 }
 
@@ -419,14 +424,27 @@ body.template-dark {
         padding: 0;
     }
 
-    .modal{
-        left: 2%;
-        width: 96%;
+    .modal-content{
+        width: 94%;
+        height: 92%;
+    }
+
+    .modal-title{
+        font-size: 1.5rem;
     }
 
     .modal-icon{
-        width: 20%;
+        bottom: 6rem;
+        left: 1rem;
+        width: 25%;
     }
+
+    .modal-info{
+        top: 35%;
+        font-size: 1.5rem;
+        padding: 3rem 15rem;
+    }
+
 }
 
 .card {
